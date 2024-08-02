@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { env } from "@/env.mjs";
-import { Inter } from "next/font/google";
-import defaultMetadata from "@/config/metadata";
+import { DM_Sans } from "next/font/google";
+import { siteConfig } from "@/config/site";
 import "./globals.css";
+import { ThemeProvider } from "@/components/theme-provider";
 
-const inter = Inter({ subsets: ["latin"] });
+const font = DM_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  ...defaultMetadata,
+  ...siteConfig,
 };
 
 export default function RootLayout({
@@ -17,8 +18,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body className={font.className}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
+      </body>
       {env.NEXT_PUBLIC_GA_ID && (
         <GoogleAnalytics gaId={env.NEXT_PUBLIC_GA_ID} />
       )}
