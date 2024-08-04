@@ -1,10 +1,10 @@
 import { Metadata } from "next";
-import defaultMetadata from "@/config/metadata";
+import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title: {
-    template: `%s | ${defaultMetadata.title}`,
-    default: defaultMetadata.title,
+    template: `%s | ${siteConfig.name}`,
+    default: siteConfig.name,
   },
 };
 
