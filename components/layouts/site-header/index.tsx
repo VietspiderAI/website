@@ -1,5 +1,6 @@
 import { CTAButton } from "@/components/ui/cta";
 import { MainNav } from "./main-nav";
+import Link from "next/link";
 
 export function SiteHeader() {
   return (
@@ -12,7 +13,9 @@ export function SiteHeader() {
             <CommandMenu />
           </div> */}
           <nav className="flex items-center">{/* <ModeToggle /> */}</nav>
-          <CTAButton variant="primary">Request a demo</CTAButton>
+          <CTAButton variant="primary" asChild>
+            <Link href="/request-demo">Request a demo</Link>
+          </CTAButton>
         </div>
       </div>
     </header>

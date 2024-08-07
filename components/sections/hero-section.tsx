@@ -4,6 +4,7 @@ import { CTAButton } from "../ui/cta";
 import Image from "next/image";
 import AppScreenSpotlight from "@/public/assets/images/app-screen.png";
 import { Badge } from "../ui/badge";
+import Link from "next/link";
 
 export const HeroSection = () => {
   return (
@@ -32,7 +33,9 @@ export const HeroSection = () => {
               We empower users with advanced AI tools for enhanced analysis,
               insights, and decision-making.
             </p>
-            <CTAButton variant="default">Request a demo</CTAButton>
+            <CTAButton variant="default" asChild>
+              <Link href="/request-demo">Request a demo</Link>
+            </CTAButton>
           </div>
           <div className="container max-sm:px-5">
             <div className="mt-12 w-full rounded-[10px] border border-white/10 bg-gradient-to-r from-background via-background/0 to-background p-1 md:p-2.5">

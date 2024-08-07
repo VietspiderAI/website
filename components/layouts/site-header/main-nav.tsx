@@ -1,102 +1,56 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { usePathname } from "next/navigation"
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
-import { siteConfig } from "@/config/site"
-import { cn } from "@/lib/utils"
-import { SquareLogo } from "@/components/logo"
+import { siteConfig } from "@/config/site";
+import { cn } from "@/lib/utils";
+import { SquareLogo } from "@/components/logo";
 
 export function MainNav() {
-  const pathname = usePathname()
+  const pathname = usePathname();
 
   return (
     <div className="mr-4 hidden md:flex">
       <Link href="/" className="mr-4 flex items-center space-x-2 lg:mr-6">
         <SquareLogo />
-        <span className="hidden font-bold lg:inline-block">
+        <span className="hidden font-semibold tracking-wide text-primary lg:inline-block">
           {siteConfig.name}
         </span>
       </Link>
       <nav className="flex items-center gap-4 text-sm lg:gap-6">
         <Link
-          href="/docs"
+          href="/products"
           className={cn(
             "transition-colors hover:text-foreground/80",
-            pathname === "/docs" ? "text-foreground" : "text-foreground/60"
+            pathname === "/docs" ? "text-foreground" : "text-foreground/60",
           )}
         >
-          Docs
+          Products
         </Link>
         <Link
-          href="/docs/components"
+          href="our-team"
           className={cn(
             "transition-colors hover:text-foreground/80",
-            pathname?.startsWith("/docs/components") &&
-              !pathname?.startsWith("/docs/component/chart")
+            pathname?.startsWith("our-team")
               ? "text-foreground"
-              : "text-foreground/60"
+              : "text-foreground/60",
           )}
         >
-          Components
+          Our Team
         </Link>
         <Link
-          href="/blocks"
+          href="/contact"
           className={cn(
             "transition-colors hover:text-foreground/80",
-            pathname?.startsWith("/blocks")
+            pathname?.startsWith("/contact")
               ? "text-foreground"
-              : "text-foreground/60"
+              : "text-foreground/60",
           )}
         >
-          Blocks
-        </Link>
-        <Link
-          href="/charts"
-          className={cn(
-            "transition-colors hover:text-foreground/80",
-            pathname?.startsWith("/docs/component/chart") ||
-              pathname?.startsWith("/charts")
-              ? "text-foreground"
-              : "text-foreground/60"
-          )}
-        >
-          Charts
-        </Link>
-        <Link
-          href="/themes"
-          className={cn(
-            "transition-colors hover:text-foreground/80",
-            pathname?.startsWith("/themes")
-              ? "text-foreground"
-              : "text-foreground/60"
-          )}
-        >
-          Themes
-        </Link>
-        <Link
-          href="/examples"
-          className={cn(
-            "transition-colors hover:text-foreground/80",
-            pathname?.startsWith("/examples")
-              ? "text-foreground"
-              : "text-foreground/60"
-          )}
-        >
-          Examples
-        </Link>
-        <Link
-          href="/colors"
-          className={cn(
-            "transition-colors hover:text-foreground/80",
-            pathname?.startsWith("/colors")
-              ? "text-foreground"
-              : "text-foreground/60"
-          )}
-        >
-          Colors
+          Contact
         </Link>
       </nav>
     </div>
-  )
+  );
 }
