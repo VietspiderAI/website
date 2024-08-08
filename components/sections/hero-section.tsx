@@ -1,10 +1,10 @@
-import { cn } from "@/lib/utils";
-import { PropsWithChildren } from "react";
-import { CTAButton } from "../ui/cta";
-import Image from "next/image";
-import AppScreenSpotlight from "@/public/assets/images/app-screen.png";
-import { Badge } from "../ui/badge";
-import Link from "next/link";
+import { cn } from '@/lib/utils'
+import { PropsWithChildren } from 'react'
+import { CTAButton } from '../ui/cta'
+import Image from 'next/image'
+import AppScreenSpotlight from '@/public/assets/images/app-screen.png'
+import { Badge } from '../ui/badge'
+import Link from 'next/link'
 
 export const HeroSection = () => {
   return (
@@ -19,7 +19,7 @@ export const HeroSection = () => {
             <h1 className="inline-flex flex-col text-6xl font-semibold lg:text-7xl">
               <span>Pioneers innovative</span>
               <span className="space-x-4">
-                {`AI-driven solutions.`.split(" ").map((char, i) => (
+                {`AI-driven solutions.`.split(' ').map((char, i) => (
                   <span
                     key={char + i}
                     className="inline-block bg-gradient-to-b from-white to-primary bg-clip-text text-transparent"
@@ -51,24 +51,24 @@ export const HeroSection = () => {
       <div className="pointer-events-none absolute inset-0 z-10 size-full bg-gradient-to-b from-transparent from-60% to-background to-95%" />
       <div className="pointer-events-none absolute inset-0 z-[2] size-full bg-[url('/assets/images/grain.png')] bg-[length:118px] bg-repeat opacity-[0.04]" />
     </section>
-  );
-};
+  )
+}
 
 const BackgroundFlare: React.FC<PropsWithChildren> = ({ children }) => {
   const centerPos =
-    "absolute left-1/2 top-1/2 z-0 -translate-x-1/2 -translate-y-1/2";
+    'absolute left-1/2 top-1/2 z-0 -translate-x-1/2 -translate-y-1/2'
   return (
     <div className="relative flex max-h-[calc(100vh+20px)] justify-center overflow-hidden pt-[96px] md:max-h-[calc(100vh+60px)] lg:max-h-none">
       <div
         className={cn(
           centerPos,
-          "aspect-square w-[750px] rounded-full bg-[#AC4D39] blur-[220px]",
+          'aspect-square w-[750px] rounded-full bg-[#AC4D39] blur-[220px]'
         )}
       />
       <div
         className={cn(
           centerPos,
-          "aspect-square w-[400px] rounded-full bg-[#FE8029] blur-[100px]",
+          'aspect-square w-[400px] rounded-full bg-[#FE8029] blur-[100px]'
         )}
       />
       <svg width="1032" height="1032" viewBox="0 0 1032 1032" fill="none">
@@ -95,5 +95,5 @@ const BackgroundFlare: React.FC<PropsWithChildren> = ({ children }) => {
       </svg>
       {children}
     </div>
-  );
-};
+  )
+}

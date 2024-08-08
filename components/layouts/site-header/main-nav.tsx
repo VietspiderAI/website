@@ -1,14 +1,14 @@
-"use client";
+'use client'
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
-import { siteConfig } from "@/config/site";
-import { cn } from "@/lib/utils";
-import { SquareLogo } from "@/components/logo";
+import { siteConfig } from '@/config/site'
+import { cn } from '@/lib/utils'
+import { SquareLogo } from '@/components/logo'
 
 export function MainNav() {
-  const pathname = usePathname();
+  const pathname = usePathname()
 
   return (
     <div className="mr-4 hidden md:flex">
@@ -22,8 +22,8 @@ export function MainNav() {
         <Link
           href="/products"
           className={cn(
-            "transition-colors hover:text-foreground/80",
-            pathname === "/docs" ? "text-foreground" : "text-foreground/60",
+            'transition-colors hover:text-foreground/80',
+            pathname === '/docs' ? 'text-foreground' : 'text-foreground/60'
           )}
         >
           Products
@@ -31,10 +31,10 @@ export function MainNav() {
         <Link
           href="our-team"
           className={cn(
-            "transition-colors hover:text-foreground/80",
-            pathname?.startsWith("our-team")
-              ? "text-foreground"
-              : "text-foreground/60",
+            'transition-colors hover:text-foreground/80',
+            pathname?.startsWith('our-team')
+              ? 'text-foreground'
+              : 'text-foreground/60'
           )}
         >
           Our Team
@@ -42,15 +42,15 @@ export function MainNav() {
         <Link
           href="/contact"
           className={cn(
-            "transition-colors hover:text-foreground/80",
-            pathname?.startsWith("/contact")
-              ? "text-foreground"
-              : "text-foreground/60",
+            'transition-colors hover:text-foreground/80',
+            pathname?.startsWith('/contact')
+              ? 'text-foreground'
+              : 'text-foreground/60'
           )}
         >
           Contact
         </Link>
       </nav>
     </div>
-  );
+  )
 }

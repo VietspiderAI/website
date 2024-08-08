@@ -1,5 +1,10 @@
-import { ModalRoutes } from "@/components/modal-routes";
+import { ModalRoutes } from '@/components/modal-routes'
+import RequestDemoContent from '../../../request-demo/page'
 
 export default function RequestDemoModal() {
-  return <ModalRoutes>Request a demo form here</ModalRoutes>;
+  return (
+    <ModalRoutes>
+      <RequestDemoContent />
+    </ModalRoutes>
+  )
 }

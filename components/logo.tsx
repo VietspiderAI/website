@@ -1,9 +1,9 @@
-import { useId } from "react";
+import { useId } from 'react'
 
-type IconProps = React.HTMLAttributes<SVGElement>;
+type IconProps = React.HTMLAttributes<SVGElement>
 
 export const SquareLogo = (props: IconProps) => {
-  const id = useId();
+  const id = useId()
   return (
     <svg width="36" height="36" viewBox="0 0 36 36" fill="none" {...props}>
       <path
@@ -56,5 +56,5 @@ export const SquareLogo = (props: IconProps) => {
         </linearGradient>
       </defs>
     </svg>
-  );
-};
+  )
+}

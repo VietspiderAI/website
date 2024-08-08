@@ -1,21 +1,21 @@
-import type { Metadata } from "next";
-import { GoogleAnalytics } from "@next/third-parties/google";
-import { env } from "@/env.mjs";
-import { DM_Sans } from "next/font/google";
-import { siteConfig } from "@/config/site";
-import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
+import type { Metadata } from 'next'
+import { GoogleAnalytics } from '@next/third-parties/google'
+import { env } from '@/env.mjs'
+import { DM_Sans } from 'next/font/google'
+import { siteConfig } from '@/config/site'
+import './globals.css'
+import { ThemeProvider } from '@/components/theme-provider'
 
-const font = DM_Sans({ subsets: ["latin"] });
+const font = DM_Sans({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  ...siteConfig,
-};
+  ...siteConfig
+}
 
 export default function RootLayout({
-  children,
+  children
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
@@ -33,5 +33,5 @@ export default function RootLayout({
         <GoogleAnalytics gaId={env.NEXT_PUBLIC_GA_ID} />
       )}
     </html>
-  );
+  )
 }

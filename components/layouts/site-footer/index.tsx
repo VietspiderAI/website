@@ -1,5 +1,5 @@
-import { SquareLogo } from "@/components/logo";
-import { cn } from "@/lib/utils";
+import { SquareLogo } from '@/components/logo'
+import { cn } from '@/lib/utils'
 
 export const SiteFooter: React.FC = () => {
   const quickLinks: Record<
@@ -7,21 +7,25 @@ export const SiteFooter: React.FC = () => {
     { name: string; href: string; className?: string }[]
   > = {
     product: [
-      { name: "Analytics AI", href: "#" },
-      { name: "Coming soon", href: "#", className: "text-muted-foreground/30 pointer-events-none" },
+      { name: 'Analytics AI', href: '#' },
+      {
+        name: 'Coming soon',
+        href: '#',
+        className: 'text-muted-foreground/30 pointer-events-none'
+      }
     ],
     about: [
-      { name: "About", href: "#" },
-      { name: "Careers", href: "#" },
-      { name: "History", href: "#" },
-      { name: "Our Team", href: "#" },
+      { name: 'About', href: '#' },
+      { name: 'Careers', href: '#' },
+      { name: 'History', href: '#' },
+      { name: 'Our Team', href: '#' }
     ],
     support: [
-      { name: "FAQs", href: "#" },
-      { name: "Contact", href: "#" },
-      { name: "Live Chat", href: "#" },
-    ],
-  };
+      { name: 'FAQs', href: '#' },
+      { name: 'Contact', href: '#' },
+      { name: 'Live Chat', href: '#' }
+    ]
+  }
 
   return (
     <footer className="border-t bg-background text-foreground/50">
@@ -155,8 +159,8 @@ export const SiteFooter: React.FC = () => {
                     <li key={name}>
                       <a
                         className={cn(
-                          "text-foreground/50 transition hover:text-foreground",
-                          className,
+                          'text-foreground/50 transition hover:text-foreground',
+                          className
                         )}
                         href={href}
                       >
@@ -177,5 +181,5 @@ export const SiteFooter: React.FC = () => {
         </div>
       </div>
     </footer>
-  );
-};
+  )
+}

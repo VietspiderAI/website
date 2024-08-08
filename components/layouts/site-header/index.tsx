@@ -1,6 +1,6 @@
-import { CTAButton } from "@/components/ui/cta";
-import { MainNav } from "./main-nav";
-import Link from "next/link";
+import { CTAButton } from '@/components/ui/cta'
+import { MainNav } from './main-nav'
+import Link from 'next/link'
 
 export function SiteHeader() {
   return (
@@ -19,5 +19,5 @@ export function SiteHeader() {
         </div>
       </div>
     </header>
-  );
+  )
 }

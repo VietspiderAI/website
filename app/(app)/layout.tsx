@@ -1,9 +1,9 @@
-import { SiteFooter } from "@/components/layouts/site-footer";
-import { SiteHeader } from "@/components/layouts/site-header";
+import { SiteFooter } from '@/components/layouts/site-footer'
+import { SiteHeader } from '@/components/layouts/site-header'
 
 interface AppLayoutProps {
-  modal: React.ReactNode;
-  children: React.ReactNode;
+  modal: React.ReactNode
+  children: React.ReactNode
 }
 
 export default function AppLayout({ children, modal }: AppLayoutProps) {
@@ -16,5 +16,5 @@ export default function AppLayout({ children, modal }: AppLayoutProps) {
       </main>
       <SiteFooter />
     </>
-  );
+  )
 }

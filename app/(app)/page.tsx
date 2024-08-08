@@ -1,4 +1,8 @@
-import { CtaBannerSection, FeatureSection, HeroSection } from "@/components/sections";
+import {
+  CtaBannerSection,
+  FeatureSection,
+  HeroSection
+} from '@/components/sections'
 
 export default function Home() {
   return (
@@ -7,5 +11,5 @@ export default function Home() {
       <FeatureSection />
       <CtaBannerSection />
     </main>
-  );
+  )
 }

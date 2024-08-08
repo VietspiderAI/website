@@ -1,35 +1,35 @@
-import { title } from "process";
-import { CTAButton } from "../ui/cta";
-import { Bot, LineChart, LucideIcon, ScanEye, SquareStack } from "lucide-react";
-import { FeatureCard } from "../ui/feature-card";
+import { title } from 'process'
+import { CTAButton } from '../ui/cta'
+import { Bot, LineChart, LucideIcon, ScanEye, SquareStack } from 'lucide-react'
+import { FeatureCard } from '../ui/feature-card'
 
 export const FeatureSection = () => {
   const features: { title: string; description: string; icon: LucideIcon }[] = [
     {
-      title: "Visualization",
+      title: 'Visualization',
       description:
-        "We create intuitive no-code dashboards with generative AI for seamless data visualization.",
-      icon: LineChart,
+        'We create intuitive no-code dashboards with generative AI for seamless data visualization.',
+      icon: LineChart
     },
     {
-      title: "Insights",
+      title: 'Insights',
       description:
-        "Our AI-powered insights extractors generate comprehensive reports for data analysis.",
-      icon: ScanEye,
+        'Our AI-powered insights extractors generate comprehensive reports for data analysis.',
+      icon: ScanEye
     },
     {
-      title: "Chatbot",
+      title: 'Chatbot',
       description:
-        "Users can fully interact with our chatbot for data quality validation, insights extraction, and predictive modeling.",
-      icon: Bot,
+        'Users can fully interact with our chatbot for data quality validation, insights extraction, and predictive modeling.',
+      icon: Bot
     },
     {
-      title: "Versatile",
+      title: 'Versatile',
       description:
-        "Our solutions are applicable across various industries, including insurance, finance, education, and retail.",
-      icon: SquareStack,
-    },
-  ];
+        'Our solutions are applicable across various industries, including insurance, finance, education, and retail.',
+      icon: SquareStack
+    }
+  ]
   return (
     <section className="pb-16 pt-8">
       <div className="container grid gap-14 md:grid-cols-2">
@@ -51,5 +51,5 @@ export const FeatureSection = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}

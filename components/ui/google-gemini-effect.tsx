@@ -1,26 +1,26 @@
-"use client";
-import { cn } from "@/lib/utils";
-import { motion, MotionValue } from "framer-motion";
-import React from "react";
+'use client'
+import { cn } from '@/lib/utils'
+import { motion, MotionValue } from 'framer-motion'
+import React from 'react'
 
 const transition = {
   duration: 0,
-  ease: "linear",
-};
+  ease: 'linear'
+}
 
 export const GoogleGeminiEffect = ({
   pathLengths,
   title,
   description,
-  className,
+  className
 }: {
-  pathLengths: MotionValue[];
-  title?: string;
-  description?: string;
-  className?: string;
+  pathLengths: MotionValue[]
+  title?: string
+  description?: string
+  className?: string
 }) => {
   return (
-    <div className={cn("sticky top-80", className)}>
+    <div className={cn('sticky top-80', className)}>
       <p className="bg-gradient-to-b from-neutral-100 to-neutral-300 bg-clip-text pb-4 text-center text-lg font-normal text-transparent md:text-7xl">
         {title || `Demo hero banner with Google Gemini Effect`}
       </p>
@@ -47,10 +47,10 @@ export const GoogleGeminiEffect = ({
           strokeWidth="2"
           fill="none"
           initial={{
-            pathLength: 0,
+            pathLength: 0
           }}
           style={{
-            pathLength: pathLengths[0],
+            pathLength: pathLengths[0]
           }}
           transition={transition}
         />
@@ -60,10 +60,10 @@ export const GoogleGeminiEffect = ({
           strokeWidth="2"
           fill="none"
           initial={{
-            pathLength: 0,
+            pathLength: 0
           }}
           style={{
-            pathLength: pathLengths[1],
+            pathLength: pathLengths[1]
           }}
           transition={transition}
         />
@@ -73,10 +73,10 @@ export const GoogleGeminiEffect = ({
           strokeWidth="2"
           fill="none"
           initial={{
-            pathLength: 0,
+            pathLength: 0
           }}
           style={{
-            pathLength: pathLengths[2],
+            pathLength: pathLengths[2]
           }}
           transition={transition}
         />
@@ -86,10 +86,10 @@ export const GoogleGeminiEffect = ({
           strokeWidth="2"
           fill="none"
           initial={{
-            pathLength: 0,
+            pathLength: 0
           }}
           style={{
-            pathLength: pathLengths[3],
+            pathLength: pathLengths[3]
           }}
           transition={transition}
         />
@@ -99,10 +99,10 @@ export const GoogleGeminiEffect = ({
           strokeWidth="2"
           fill="none"
           initial={{
-            pathLength: 0,
+            pathLength: 0
           }}
           style={{
-            pathLength: pathLengths[4],
+            pathLength: pathLengths[4]
           }}
           transition={transition}
         />
@@ -157,5 +157,5 @@ export const GoogleGeminiEffect = ({
         </defs>
       </svg>
     </div>
-  );
-};
+  )
+}

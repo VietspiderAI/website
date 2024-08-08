@@ -5,6 +5,13 @@
     "prettier",
     "plugin:tailwindcss/recommended"
   ],
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      { "trailingComma": "none", "semi": false, "singleQuote": true }
+    ]
+  },
   "overrides": [
     {
       "files": ["*.js", "*.ts", "*.tsx"],
