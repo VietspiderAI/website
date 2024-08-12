@@ -3,7 +3,12 @@ import { z } from 'zod'
 
 export const env = createEnv({
   server: {
-    SITE_URL: z.string()
+    SITE_URL: z.string(),
+    
+    // Credentials for mail service
+    MAIL_RECEIVER: z.string(),
+    MAIL_USER: z.string(),
+    MAIL_PASS: z.string(),
   },
   client: {
     NEXT_PUBLIC_GA_ID: z.string().optional()
